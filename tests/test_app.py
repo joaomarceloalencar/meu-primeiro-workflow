@@ -1,6 +1,6 @@
 # tests/test_app.py
 import pytest
-from app import app as flask_app # Importa a instância da app Flask
+from app import app as flask_app   # Importa a instância da app Flask
 
 
 @pytest.fixture
@@ -17,5 +17,4 @@ def test_hello_world(client):
     """Testa se a rota principal ('/') retorna status 200 e contém a saudação."""
     response = client.get('/')
     assert response.status_code == 200
-    assert b'Ol\xc3\xa1, Mundo DevOps' in response.data # Usando bytes e codificação correta para 'Olá'
-
+    assert b'Ol\xc3\xa1, Mundo DevOps' in response.data   # Usando bytes e codificação correta para 'Olá'
