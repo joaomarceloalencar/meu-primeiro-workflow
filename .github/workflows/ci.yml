@@ -52,4 +52,5 @@ jobs:
       # Passo 5: Executar testes com pytest
       - name: Run tests with pytest
         run: |
-          pytest tests/ # Executa os testes na pasta 'tests'
+          export PYTHONPATH=.  # Adiciona o diretório raiz ao PYTHONPATH
+          pytest tests/        # Executa os testes na pasta 'tests'
